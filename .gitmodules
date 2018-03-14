@@ -18,11 +18,14 @@
 	path = third_party/glog
 	url = https://github.com/google/glog.git
 	branch = v0.3.3
+	ignore = dirty
 [submodule "third_party/leveldb"]
 	path = third_party/leveldb
 	url = https://github.com/google/leveldb.git
 	branch = v1.18
+	ignore = dirty
 [submodule "third_party/protobuf"]
 	path = third_party/protobuf
 	url = https://github.com/google/protobuf.git
 	branch = v3.0.0
+	ignore = dirty

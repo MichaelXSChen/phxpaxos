@@ -7,4 +7,11 @@ git submodule update --init --recursive
 
 (cd third_party && bash ./insatll_dependency.sh)
 
-# make
+./autoinstall.sh
+make 
+make install
+
+cd plugin
+
+make 
+make install
