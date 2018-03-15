@@ -45,3 +45,6 @@ build/
 Makefile
 *.pyc
 src/node/test_propose_batch
+
+# VSCode
+.vscode/

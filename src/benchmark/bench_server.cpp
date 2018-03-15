@@ -91,6 +91,7 @@ int BenchServer :: RunPaxos()
 
     oOptions.oMyNode = m_oMyNode;
     oOptions.vecNodeInfoList = m_vecNodeList;
+    oOptions.bSync = false;
 
     //different paxos group can have different state machine.
     for (auto & poBenchSM : m_vecSMList)
