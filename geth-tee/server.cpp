@@ -36,7 +36,7 @@ const int port_base = 11111;
 
 
 PhxServer :: PhxServer(const phxpaxos::NodeInfo & oMyNode, const phxpaxos::NodeInfoList & vecNodeList)
-    : m_oMyNode(oMyNode), m_vecNodeList(vecNodeList), m_poPaxosNode(nullptr)
+    : m_oMyNode(oMyNode), m_vecNodeList(vecNodeList), m_poPaxosNode(nullptr), m_oEchoSM(1,1)
 {
 }
 
@@ -47,14 +47,15 @@ PhxServer :: ~PhxServer()
 
 
 
-
-PhxServer ::PhxServer(int offset) {
+PhxServer ::PhxServer(int offset) : m_oEchoSM(1,1)
+{
     m_oMyNode.SetIPPort(loop_back, port_base+offset);
     for (int i = 0; i<3; i++){
         NodeInfo peer;
         peer.SetIPPort(loop_back, port_base + i);
         m_vecNodeList.push_back(peer);
     }
+    m_oEchoSM = Term(1,1);
 }
 
 

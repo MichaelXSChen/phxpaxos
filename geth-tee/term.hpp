@@ -25,6 +25,7 @@ See the AUTHORS file for names of contributors.
 #include "phxpaxos/options.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <stdint.h>
 
 
 class PhxSMCtx
@@ -42,11 +43,15 @@ public:
 class Term : public phxpaxos::StateMachine
 {
 public:
-    Term();
+    Term(uint64_t startBlock, uint64_t termLen);
 
     bool Execute(const int iGroupIdx, const uint64_t llInstanceID, 
             const std::string & sPaxosValue, phxpaxos::SMCtx * poSMCtx);
 
     const int SMID() const { return 1; }
+private:
+    uint64_t startBlock;
+    uint64_t termLen;
+    uint64_t currentBlock;
 };
 

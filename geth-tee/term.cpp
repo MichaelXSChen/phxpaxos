@@ -24,8 +24,11 @@ See the AUTHORS file for names of contributors.
 using namespace phxpaxos;
 
 
-Term :: Term()
-{
+
+Term :: Term(uint64_t startBlock, uint64_t termLen){
+    this->startBlock = startBlock;
+    this->currentBlock = startBlock;
+    this->termLen = termLen;
 }
 
 bool Term :: Execute(const int iGroupIdx, const uint64_t llInstanceID,
