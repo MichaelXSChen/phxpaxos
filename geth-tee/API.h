@@ -12,6 +12,7 @@
 #endif
 
 #include "stdint.h"
+#include "stdlib.h"
 #ifdef __cplusplus
 #include "server.hpp"
 #else
@@ -26,7 +27,7 @@ namespace thw {
 
 EXPORT_C PhxServer *createPhxGrp(uint64_t startBlock, uint64_t TermLen, int offset);
 
-EXPORT_C int consensus(PhxServer *s, const char *input); //0 for non-leader, 1 for leader
+EXPORT_C int consensus(PhxServer *s, const char *input, size_t len); //0 for non-leader, 1 for leader
 EXPORT_C int destroyPhxGrp();
 
 #ifdef __cplusplus
