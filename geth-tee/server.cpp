@@ -30,6 +30,10 @@ See the AUTHORS file for names of contributors.
 using namespace phxpaxos;
 using namespace std;
 
+const string loop_back = "127.0.0.1";
+const int port_base = 11111;
+
+
 namespace thw
 {
 
@@ -42,6 +46,19 @@ PhxServer :: ~PhxServer()
 {
     delete m_poPaxosNode;
 }
+
+
+
+
+PhxServer ::PhxServer(int offset) {
+    m_oMyNode.SetIPPort(loop_back, port_base+offset);
+    for (int i = 0; i<3; i++){
+        NodeInfo peer;
+        peer.SetIPPort(loop_back, port_base + i);
+        m_vecNodeList.push_back(peer);
+    }
+}
+
 
 int PhxServer :: MakeLogStoragePath(std::string & sLogStoragePath)
 {

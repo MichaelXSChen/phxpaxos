@@ -34,7 +34,7 @@ class PhxServer
 {
 public:
     PhxServer(const phxpaxos::NodeInfo & oMyNode, const phxpaxos::NodeInfoList & vecNodeList);
-    PhxServer(){};
+    PhxServer(int offset);
     ~PhxServer();
 
     int RunPaxos();
