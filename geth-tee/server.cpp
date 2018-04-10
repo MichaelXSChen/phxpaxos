@@ -34,8 +34,6 @@ const string loop_back = "127.0.0.1";
 const int port_base = 11111;
 
 
-namespace thw
-{
 
 PhxServer :: PhxServer(const phxpaxos::NodeInfo & oMyNode, const phxpaxos::NodeInfoList & vecNodeList)
     : m_oMyNode(oMyNode), m_vecNodeList(vecNodeList), m_poPaxosNode(nullptr)
@@ -151,6 +149,5 @@ int PhxServer :: Echo(const std::string & sEchoReqValue, std::string & sEchoResp
 
     return 0;
 }
-    
-}
+
 

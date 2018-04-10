@@ -4,7 +4,6 @@
 #include "API.h"
 #include "server.hpp"
 
-using namespace thw;
 using namespace std;
 
 PhxServer* createPhxGrp(uint64_t startBlock, uint64_t TermLen, int offset){

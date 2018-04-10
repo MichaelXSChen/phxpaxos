@@ -23,8 +23,6 @@ See the AUTHORS file for names of contributors.
 
 using namespace phxpaxos;
 
-namespace thw
-{
 
 Term :: Term()
 {
@@ -47,5 +45,4 @@ bool Term :: Execute(const int iGroupIdx, const uint64_t llInstanceID,
     return true;
 }
 
-}
 

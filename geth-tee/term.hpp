@@ -26,8 +26,6 @@ See the AUTHORS file for names of contributors.
 #include <stdio.h>
 #include <unistd.h>
 
-namespace thw
-{
 
 class PhxSMCtx
 {
@@ -51,5 +49,4 @@ public:
 
     const int SMID() const { return 1; }
 };
-    
-}
+

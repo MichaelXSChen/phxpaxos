@@ -10,6 +10,7 @@
 int main(int argc, char ** argv){
     if (argc != 2){
         printf("Usage: thw [offset]");
+        return 1; 
     }
     int offset = atoi(argv[1]);
     printf("Creating Node: %d", offset);

@@ -21,16 +21,10 @@ typedef struct PhxServer PhxServer;
 
 
 
-#ifdef __cplusplus
-namespace thw {
-#endif
 
 EXPORT_C PhxServer *createPhxGrp(uint64_t startBlock, uint64_t TermLen, int offset);
 
 EXPORT_C int consensus(PhxServer *s, const char *input, size_t len); //0 for non-leader, 1 for leader
 EXPORT_C int destroyPhxGrp();
 
-#ifdef __cplusplus
-}
-#endif
 #endif //THW_API_H
