@@ -99,7 +99,7 @@
 | 根目录             | libphxpaxos.a        | 无                                 | protobuf,leveldb |
 | plugin             | libphxpaxos_plugin.a | libphxpaxos.a                      | glog             |
 | sample/phxelection | 可执行程序           | libphxpaxos.a,libphxpaxos_plugin.a | 无               |
-| sample/phxecho     | 可执行程序           | libphxpaxos.a,libphxpaxos_plugin.a | 无               |
+| sample/thw     | 可执行程序           | libphxpaxos.a,libphxpaxos_plugin.a | 无               |
 | sample/phxkv       | 可执行程序           | libphxpaxos.a,libphxpaxos_plugin.a | grpc             |
 | src/ut             | 单元测试             | 无                                 | gtest,gmock      |
 
@@ -279,7 +279,7 @@ int PhxEchoServer :: RunPaxos()
 
     //use logger_google to print log
     LogFunc pLogFunc;
-    ret = LoggerGoogle :: GetLogger("phxecho", "./log", 3, pLogFunc);
+    ret = LoggerGoogle :: GetLogger("thw", "./log", 3, pLogFunc);
     if (ret != 0)
     {   
         printf("get logger_google fail, ret %d\n", ret);

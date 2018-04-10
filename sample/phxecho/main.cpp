@@ -19,7 +19,7 @@ permissions and limitations under the License.
 See the AUTHORS file for names of contributors. 
 */
 
-#include "echo_server.h"
+#include "server.h"
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -27,7 +27,7 @@ See the AUTHORS file for names of contributors.
 #include <string.h>
 #include "phxpaxos/options.h"
 
-using namespace phxecho;
+using namespace thw;
 using namespace phxpaxos;
 using namespace std;
 

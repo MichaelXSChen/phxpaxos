@@ -27,7 +27,7 @@ See the AUTHORS file for names of contributors.
 #include <vector>
 #include "phxpaxos_plugin/logger_google.h"
 
-namespace phxecho
+namespace thw
 {
 
 class PhxEchoServer

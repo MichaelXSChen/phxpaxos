@@ -94,7 +94,7 @@ Following is a dependency relationship tablet of all directories.
 | root             | libphxpaxos.a        | None                                 | protobuf,leveldb |
 | plugin             | libphxpaxos_plugin.a | libphxpaxos.a                      | glog             |
 | sample/phxelection | Executable program           | libphxpaxos.a,libphxpaxos_plugin.a | None               |
-| sample/phxecho     | Executable program           | libphxpaxos.a,libphxpaxos_plugin.a | None               |
+| sample/thw     | Executable program           | libphxpaxos.a,libphxpaxos_plugin.a | None               |
 | sample/phxkv       | Executable program           | libphxpaxos.a,libphxpaxos_plugin.a | grpc             |
 | src/ut             | Unit tests             | None                                 | gtest,gmock      |
 
@@ -277,7 +277,7 @@ int PhxEchoServer :: RunPaxos()
 
     //use logger_google to print log
     LogFunc pLogFunc;
-    ret = LoggerGoogle :: GetLogger("phxecho", "./log", 3, pLogFunc);
+    ret = LoggerGoogle :: GetLogger("thw", "./log", 3, pLogFunc);
     if (ret != 0)
     {   
         printf("get logger_google fail, ret %d\n", ret);

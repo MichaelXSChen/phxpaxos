@@ -19,7 +19,7 @@ permissions and limitations under the License.
 See the AUTHORS file for names of contributors. 
 */
 
-#include "echo_server.h"
+#include "server.h"
 #include <assert.h>
 #include <string>
 #include <unistd.h>
@@ -30,7 +30,7 @@ See the AUTHORS file for names of contributors.
 using namespace phxpaxos;
 using namespace std;
 
-namespace phxecho
+namespace thw
 {
 
 PhxEchoServer :: PhxEchoServer(const phxpaxos::NodeInfo & oMyNode, const phxpaxos::NodeInfoList & vecNodeList)
@@ -87,7 +87,7 @@ int PhxEchoServer :: RunPaxos()
 
     //use logger_google to print log
     LogFunc pLogFunc;
-    ret = LoggerGoogle :: GetLogger("phxecho", "./log", 3, pLogFunc);
+    ret = LoggerGoogle :: GetLogger("thw", "./log", 3, pLogFunc);
     if (ret != 0)
     {
         printf("get logger_google fail, ret %d\n", ret);

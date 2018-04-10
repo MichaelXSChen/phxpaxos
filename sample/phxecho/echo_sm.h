@@ -26,7 +26,7 @@ See the AUTHORS file for names of contributors.
 #include <stdio.h>
 #include <unistd.h>
 
-namespace phxecho
+namespace thw
 {
 
 class PhxEchoSMCtx

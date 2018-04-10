@@ -17,7 +17,7 @@
 # 
 # See the AUTHORS file for names of contributors. 
 
-allobject=phxecho 
+allobject=thw
 
 PHXECHO_OBJ=echo_sm.o echo_server.o main.o
 
@@ -25,7 +25,7 @@ PHXECHO_LIB=
 
 PHXECHO_SYS_LIB=$(PHXPAXOS_LIB_PATH)/libphxpaxos.a $(LEVELDB_LIB_PATH)/libleveldb.a $(PROTOBUF_LIB_PATH)/libprotobuf.a -lpthread $(PHXPAXOS_LIB_PATH)/libphxpaxos_plugin.a $(PHXPAXOS_LIB_PATH)/libphxpaxos.a $(LEVELDB_LIB_PATH)/libleveldb.a $(PROTOBUF_LIB_PATH)/libprotobuf.a -lpthread $(GLOG_LIB_PATH)/libglog.a $(GLOG_LIB_PATH)/libglog.a -lpthread
 
-PHXECHO_INCS=$(SRC_BASE_PATH)/sample/phxecho  $(PHXPAXOS_PLUGIN_PATH) $(PHXPAXOS_INCLUDE_PATH) $(LEVELDB_INCLUDE_PATH) $(PROTOBUF_INCLUDE_PATH) 
+PHXECHO_INCS=$(SRC_BASE_PATH)/sample/thw  $(PHXPAXOS_PLUGIN_PATH) $(PHXPAXOS_INCLUDE_PATH) $(LEVELDB_INCLUDE_PATH) $(PROTOBUF_INCLUDE_PATH)
 
 PHXECHO_EXTRA_CPPFLAGS=-Wall -Werror
 

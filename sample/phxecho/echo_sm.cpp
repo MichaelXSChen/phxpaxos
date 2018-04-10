@@ -23,7 +23,7 @@ See the AUTHORS file for names of contributors.
 
 using namespace phxpaxos;
 
-namespace phxecho
+namespace thw
 {
 
 PhxEchoSM :: PhxEchoSM()
