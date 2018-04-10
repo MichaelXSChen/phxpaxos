@@ -19,7 +19,7 @@ permissions and limitations under the License.
 See the AUTHORS file for names of contributors. 
 */
 
-#include "server.h"
+#include "server.hpp"
 #include <stdio.h>
 #include <iostream>
 #include <string>

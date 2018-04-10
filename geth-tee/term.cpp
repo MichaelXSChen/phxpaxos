@@ -19,9 +19,9 @@ permissions and limitations under the License.
 See the AUTHORS file for names of contributors. 
 */
 
-#include "term.h"
+#include "term.hpp"
 
-using namespace thw;
+using namespace phxpaxos;
 
 namespace thw
 {

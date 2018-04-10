@@ -4,13 +4,18 @@
 #include "API.h"
 #include "server.hpp"
 
-void* createPhxGrp(uint64_t startBlock, uint64_t TermLen){
+using namespace thw;
+
+PhxServer createPhxGrp(uint64_t startBlock, uint64_t TermLen){
     //Hardcoded
-    Server s();
-    s.runPaxos();
-    return (void *)s;
+    PhxServer s;
+    s.RunPaxos();
+    return s;
 }
 int consensus(const char* input){
+    return 1;
 
 } //0 for non-leader, 1 for leader
-int destroyPhxGrp();
+int destroyPhxGrp(){
+    return 1;
+};

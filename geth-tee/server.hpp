@@ -22,7 +22,7 @@ See the AUTHORS file for names of contributors.
 #pragma once
 
 #include "phxpaxos/node.h"
-#include "term.h"
+#include "term.hpp"
 #include <string>
 #include <vector>
 #include "phxpaxos_plugin/logger_google.h"
@@ -34,6 +34,7 @@ class PhxServer
 {
 public:
     PhxServer(const phxpaxos::NodeInfo & oMyNode, const phxpaxos::NodeInfoList & vecNodeList);
+    PhxServer(){};
     ~PhxServer();
 
     int RunPaxos();

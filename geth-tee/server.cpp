@@ -19,7 +19,7 @@ permissions and limitations under the License.
 See the AUTHORS file for names of contributors. 
 */
 
-#include "server.h"
+#include "server.hpp"
 #include <assert.h>
 #include <string>
 #include <unistd.h>
@@ -111,7 +111,7 @@ int PhxServer :: RunPaxos()
 int PhxServer :: Echo(const std::string & sEchoReqValue, std::string & sEchoRespValue)
 {
     SMCtx oCtx;
-    PhxEchoSMCtx oEchoSMCtx;
+    PhxSMCtx oEchoSMCtx;
     //smid must same to PhxEchoSM.SMID().
     oCtx.m_iSMID = 1;
     oCtx.m_pCtx = (void *)&oEchoSMCtx;
