@@ -5,17 +5,13 @@
 #ifndef THW_API_H
 #define THW_API_H
 
-#include "stdlib.h"
-#include "stdint.h"
-
-
 #ifdef __cplusplus
 #define EXPORT_C extern "C"
 #else
 #define EXPORT_C
 #endif
 
-
+#include "stdint.h"
 #ifdef __cplusplus
 #include "server.hpp"
 #else
@@ -30,7 +26,7 @@ namespace thw {
 
 EXPORT_C PhxServer *createPhxGrp(uint64_t startBlock, uint64_t TermLen, int offset);
 
-EXPORT_C int consensus(PhxServer *s, const char *input, size_t len); //0 for non-leader, 1 for leader
+EXPORT_C int consensus(PhxServer *s, const char *input); //0 for non-leader, 1 for leader
 EXPORT_C int destroyPhxGrp();
 
 #ifdef __cplusplus
