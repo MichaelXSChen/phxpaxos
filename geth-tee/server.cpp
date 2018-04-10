@@ -27,7 +27,7 @@ See the AUTHORS file for names of contributors.
 #include <sys/stat.h>
 #include <fcntl.h>
 
-using namespace thw;
+using namespace phxpaxos;
 using namespace std;
 
 namespace thw
